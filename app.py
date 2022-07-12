@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_restful import Api
-from flasgger import Swagger
 
 from db import db
 from resources.regions import Region, RegionsList
