@@ -10,6 +10,7 @@ from resources.jobs import Jobs, JobsList
 from resources.job_history import JobHistory, JobHistoryList
 from resources.employees import Employee, EmployeesList
 
+from default.default import Default
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -49,8 +50,7 @@ api.add_resource(JobHistoryList, "/job_histories")
 api.add_resource(Employee, "/employee/<int:employee_id>")
 api.add_resource(EmployeesList, "/employees")
 
-
-
+api.add_resource(Default, '/default')
 
 
 if __name__ == '__main__':
